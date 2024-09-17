@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaJam House Jobs</title>
+</head>
+<body>
+    <header>
+        <h1>JavaJam Coffee House</h1>
+        <h3>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="music.html">Music</a>
+        <a href="jobs.html">Jobs</a>
+        </h3>
+    </header>
+    <h2>Jobs at JavaJam</h2>
+    <p>Want to work at JavaJam? Fill out the form below to start your application.</p>
+    <p>Required fields are marked with and asterisk(*)</p>
+        <form action="https://webdevbasics.net/scripts/javajam8.php">
+            <label for="fname">Name:</label><br>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="exp">Experience:</label><br>
+            <textarea name="exp" id="exp" rows="4" cols="50"></textarea><br><br>
+            <label for="position">Select Job Position:</label><br>
+            <select name="position" id="position">
+                <option value="Barista/artender">Barista/Bartender</option>
+                <option value="Waiter/Waitress">Waiter/Waitress</option>
+                <option value="Manager">Manager</option>
+                <option value="Salesman/Saleswoman">Sales</option>
+                <option value="Promoter">Promoter</option>
+                <option value="Social Media Holder">Social Media Holder</option>
+            </select><br><br>
+            <label for="interview">Preffered Interview Date and Time:</label><br>
+            <input type="datetime-local" id="interview" name="interview"><br><br>
+            <label for="myfile">Upload your photo:</label><br>
+            <input type="file" id="myfile" name="myfile"><br><br><br><br>
+            <input type="submit" value="Apply Now">
+        </form>
+</body>
+</html>
