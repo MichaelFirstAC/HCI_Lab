@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegation - HCI HIHIHIHI</title>
+</head>
+
+<body>
+
+    <ul id="itemList">
+
+        <!-- List items will be dynamically generated or already present here -->
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <!-- ... up to 100 items -->
+
+    </ul>
+
+    <script>
+        document.getElementById('itemList').addEventListener('click', 
+        function(event) {
+            if (event.target && event.target.nodeName === 'LI') {
+                alert('Item clicked: ' + event.target.textContent);
+            }
+        });
+    </script>
+    
+</body>
+
+</html>

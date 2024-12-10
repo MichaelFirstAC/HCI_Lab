@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCI Quizzz Ahhh Im going to end my miserable life :D</title>
+
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Item List</h1>
+    <input type="text" id="itemInput" placeholder="Enter an item">
+    <button id="additembtn">Add Item</button>
+    <p id="errormsg" class="error"></p>
+    <ul id="itemList"></ul>
+
+    <script>
+        document.getElementById('additembtn').addEventListener('click', function() {
+            const inputField = document.getElementById('itemInput');
+            const errormsg = document.getElementById('errormsg');
+            const itemList = document.getElementById('itemList');
+            const inputValue = inputField.value.trim();
+
+            if (inputValue === '') {
+                errormsg.textContent = 'Error: Cant be empty.';
+            } else {
+                errormsg.textContent = '';
+                const listItem = document.createElement('li');
+                listItem.textContent = inputValue;
+                itemList.appendChild(listItem);
+                inputField.value = '';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
